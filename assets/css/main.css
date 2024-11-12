@@ -1,11 +1,126 @@
-.btn-secondary{
+/* Principal*/
 
-    border-radius: 0;
-    background-color: yellow;
-    color:black;
-    font-weight: bold;
-    border: none;
-    font-size: large;
-    
-    
+
+main{
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
+
+main p {
+    margin-top: 15px;
+    font-size: 18pt;
+}
+
+
+main .col-auto{
+    border: 3px black solid;
+    border-radius: 10px;
+    padding: 50px;
+    padding-bottom: 10px;   
+    transition: border-color 0.3s ease-in-out;
+    position: relative;
+}
+
+main .col-auto:hover{
+    border-color: orangered;
+    cursor: pointer;
+
+
+}
+
+/* Itens */ 
+
+.item-opcao{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    margin: 0;
+    z-index: 1;
+    color: orangered;
+    text-align: center;
+    padding: 0;
+    width: 100%;
+
+}
+
+.col-auto:hover .item-opcao{
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 1;
+}
+
+.col-auto:hover {
+    transition: background-color 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
+.col-auto:hover img{
+    transform: opacity 0.3s ease-in-out;
+    opacity: 0.1;
+}
+
+
+
+/* Botões item */
+
+hr{
+    display: block;
+    border: 2px solid orangered;
+    width: 100%;
+    opacity: 1;
+
+}
+
+.item-aluguel, .item-venda {
+    transition: transform 0.3s ease;
+}
+
+.item-aluguel:hover, .item-venda:hover {
+    color: white;
+    transform: scale(1.1); 
+}
+
+/* Paginação */ 
+
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-item {
+    margin: 0 5px;
+  }
+  
+  .page-link {
+    text-decoration: none;
+    font-size: 24px; 
+    color: black; 
+    transition: color 0.3s;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    max-height: 1px;
+  }
+  
+  .page-item.active .page-link {
+    background-color: transparent;
+    color: orangered;
+}
+  
+.page-link:focus, .page-link:active .page-link:hover {
+    outline: none; 
+    background-color: transparent !important; 
+    color: black; 
+    border: none;
+    box-shadow: none;
+}
+
+  .pagination li:hover:not(.active) a {
+    background-color: none;
+    color: orangered;
+  }
